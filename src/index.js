@@ -1,5 +1,8 @@
 export class Character {
     constructor(name, type) {
+        if(!name || !type){
+            throw Error('Передан пустой элемент');
+        }
         this.name = name;
         this.type = type;
     }
@@ -44,4 +47,4 @@ export class Team {
 
 const team = new Team();
     
-team.addAll(varior, hunter);
+console.log(team.addAll(varior, hunter));
